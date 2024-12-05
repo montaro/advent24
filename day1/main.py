@@ -1,16 +1,17 @@
 import os
 
+from utils import get_input_file_lines
+
 
 def read_input(input_file_path: str) -> tuple[list[int], list[int]]:
     l1 = []
     l2 = []
-    with open(input_file_path) as f:
-        lines = f.readlines()
-        for line in lines:
-            sep = "  "
-            elm1, elm2 = line.split(sep)
-            l1.append(int(elm1))
-            l2.append(int(elm2))
+    lines = get_input_file_lines(input_file_path)
+    for line in lines:
+        sep = "  "
+        elm1, elm2 = line.split(sep)
+        l1.append(int(elm1))
+        l2.append(int(elm2))
     return l1, l2
 
 
