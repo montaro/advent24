@@ -1,0 +1,47 @@
+[tool.poetry]
+name = "advent24"
+version = "0.1.0"
+description = ""
+authors = ["Ahmed Refaey <ahmed.refaey@baringa.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^4.0.1"
+isort = "^5.13.2"
+black = "^24.10.0"
+flake8 = "^7.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
+known_first_party = ["plexos_cloud_client"]
+
+[tool.black]
+line-length = 140
+target-version = ['py312']
+include = '\.py$'
+exclude = '''
+/(
+    \.eggs
+    | \.git
+    | \.hg
+    | \.mypy_cache
+    | \.nox
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+    | pyproject\.toml
+    | poetry\.lock
+)/
+'''
+
