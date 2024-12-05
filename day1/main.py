@@ -25,7 +25,7 @@ def calculate_diffs(l1: list[int], l2: list[int]) -> int:
     return total_diff
 
 
-def caculate_similarity_score(l1: list[int], l2: list[int]) -> int:
+def calculate_similarity_score(l1: list[int], l2: list[int]) -> int:
     similarity_score = 0
     for elem in l1:
         similarity = l2.count(elem)
@@ -41,5 +41,5 @@ if __name__ == "__main__":
     result = calculate_diffs(l1=list1, l2=list2)
     print(f"Difference result: {result}")
     print("-------")
-    total_similarity_score = caculate_similarity_score(l1=list1, l2=list2)
+    total_similarity_score = calculate_similarity_score(l1=list1, l2=list2)
     print(f"Similarity score: {total_similarity_score}")
